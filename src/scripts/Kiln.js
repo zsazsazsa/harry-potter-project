@@ -1,9 +1,9 @@
 export const firePottery = (pottery, temp) => {
-    Object.defineProperty(pottery, "fired", {value: true})
+    pottery.fired = true
     if (temp > 2200) {
-        Object.defineProperty(pottery, "cracked", {value: true})
+        pottery.cracked = true
     } else if (temp <= 2200) {
-        Object.defineProperty(pottery, "cracked", {value: false})
+        pottery.cracked = false
     }
     return pottery
 }   
